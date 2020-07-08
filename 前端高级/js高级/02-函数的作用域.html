@@ -1,0 +1,39 @@
+<!--
+ * @Descripttion : 
+ * @[tip]        : 1. 
+ * @version      : 
+ * @Author       : ghosthao
+ * @Date         : 2020-05-15 15:34:02
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var value = 1;
+      function foo() {
+        console.log(value);
+      }
+      value = 3;
+      function bar() {
+        var value = 2;
+        foo();
+      }
+      bar();
+
+      var scope = "global scope";
+      function checkscope() {
+        var scope = "local scope";
+        function f() {
+          return scope;
+        }
+        return f;
+      }
+      console.log(checkscope()());
+    </script>
+  </body>
+</html>

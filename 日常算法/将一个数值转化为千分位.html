@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>将一个数值转化为千分位</title>
+</head>
+<body>
+    <script>
+        // 将一个数值(有可能是整型也有可能是浮点型)转化为千分位表示
+        // 比如 111112.01 => 111,112.01
+        let num = 123456.789;
+
+        function toThousands (num){
+            let numString = num.toString();
+            if(numString.indexOf('.')>-1){
+                let res = []
+                let intPart = numString.split('.')[0].split("");
+                // 判断数组的长度，如果长度小于等于3的时候就不要切割
+                return [intPart.splice(-1,3),intPart]
+                // if(intPart.length>3){
+
+                // }else{
+
+                // }
+                
+                return intPart
+            }
+           
+        }
+        console.log(toThousands(num));
+    </script>
+</body>
+</html>

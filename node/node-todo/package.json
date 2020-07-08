@@ -1,0 +1,22 @@
+{
+  "name": "node-todo-ghosthao",
+  "version": "0.0.4",
+  "description": "一个简单的命令行todolist",
+  "main": "index.js",
+  "bin": {
+    "todo": "cli.js"
+  },
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ghosthao",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^5.1.0",
+    "inquirer": "^7.3.0"
+  }
+}

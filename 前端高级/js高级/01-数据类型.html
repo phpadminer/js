@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //一、undefined 指的是一个变量声明了，但是并没有被赋值了。
+        // 下面三种情况 会被认为是 undefined
+        // 1. 变量声明了，但是没有被赋值 ;
+        var a;
+        console.log(a === undefined);
+        // 2. 一个对象中不存在的属性;
+        var b = undefined;
+        console.log(b === undefined);
+
+        // 3. 给一个变量赋值为undefined
+        var obj = {};
+        console.log(obj.a === undefined);
+
+        // 二、获取对象属性的方式
+        
+        var obj = {};
+        obj.this = 5;
+        obj.class = 11111;
+        obj[3] = 50;
+        obj['3'] = 60;
+        console.dir(obj);
+        console.log(obj[3]);
+      
+    </script>
+</body>
+</html>

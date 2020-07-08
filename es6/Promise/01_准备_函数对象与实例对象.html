@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        //函数对象：当将一个函数当成对象来用的时候，此时这个函数就被成为函数对象
+        //实例对象：当new 一个函数的是所产生的对象就是 实例对象
+        function Fn() {
+            this.code = '111';
+            console.log(this)
+        
+        }
+        console.log(Fn.prototype); //{constructor: ƒ}
+        let f = new Fn(); //Fn {code: "111"}
+        console.log(f); 
+       
+        // let f1 = Fn();
+        // console.log(f1)// undefined
+        // console.log(code) // 111
+        function NewFn(func){
+            let fun = {};
+            fun.code = '111';
+            return fun;
+        }
+        let f2 = NewFn(Fn()) ;
+        console.log(f2 ,code );
+        let a = '';
+        console.log(a.split(','))
+
+        console.log(f.__proto__)
+
+    </script>
+</body>
+
+</html>
