@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>你好 我是css像素</span>
+    <button id="btn-change-scale-to-1">将scale设置为1</button> 
+    <button id="btn-change-scale-to-2">将scale设置为2</button> 
+    <script>
+        window.onload = ()=>{
+            const btnChangeScaleTo1 = window.document.getElementById('btn-change-scale-to-1');
+            const btnChangeScaleTo2 = window.document.getElementById('btn-change-scale-to-2');
+            const metaViewport = window.document.querySelector("meta[name='viewport']");
+            btnChangeScaleTo1.onclick = function(){
+                metaViewport.setAttribute('content','width=device-width, initial-scale=1.0');
+            }
+            btnChangeScaleTo2.onclick = function(){
+                metaViewport.setAttribute('content','initial-scale=2.0');
+            }
+        }
+    </script>
+</body>
+</html>
