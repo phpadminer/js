@@ -1,7 +1,8 @@
-function greeter(person){
-    return "Hello," + person;
+function tsGreeter(person: string) {
+  return 'Hello,' + person;
 }
 
-let user = "Jane User";
+let tsUser = 'Jane User';
 
-document.body.textContent = greeter(user);
+
+console.log(tsGreeter(tsUser));
