@@ -1,0 +1,6 @@
+#div1 span{
+    color:red;
+    backface-visibility: visible;
+    display: flex;
+    object-fit: contain;
+}
